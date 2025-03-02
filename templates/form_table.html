@@ -1,0 +1,38 @@
+<!-- /templates/form_table.html -->
+{% if show_table %}
+<div class="form-container">
+    <form method="POST">
+        <!-- Table for Utility Prices -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Utility Type</th>
+                    <th>Price ($)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Water</td>
+                    <td><input type="number" name="water_price" placeholder="Enter price" step="1" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Gas</td>
+                    <td><input type="number" name="gas_price" placeholder="Enter price" step="1" min="0"></td>
+                </tr>
+                <tr>
+                    <td>Electricity</td>
+                    <td><input type="number" name="electricity_price" placeholder="Enter price" step="1" min="0"></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- Household Input Box -->
+        <div class="household-input">
+            <label for="household">Number of people in household:</label>
+            <input type="number" id="household" name="household" placeholder="Enter number of people" step="1" min="1" required>
+        </div>
+
+        <button type="submit" name="analyze">Analyze</button>
+    </form>
+</div>
+{% endif %}
