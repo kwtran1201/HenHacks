@@ -1,0 +1,27 @@
+<!-- AI-Generated Response (Formatted as Bullet Points) -->
+{% if ai_generated_response %}
+    {% if total_footprint %}
+        <div class="footprint-advice">
+        <h2>Your Estimated Ecological Footprint: {{ total_footprint | round(2) }} kg CO2/year</h2>
+        <p>{{ advice }}</p>
+        <p>{{ location_advice }}</p>
+        </div>
+    {% endif %}
+{% endif %}
+
+{% if ai_generated_response %}
+    <div class="footprint-advice">
+        <h3>AI Response:</h3>
+        <ul>
+            {% for line in ai_generated_response.split('*') if line.strip() %}
+                {% if '**' in line %}
+                    <li><strong>{{ line.replace('**', '').strip() }}</strong></li>
+                {% else %}
+                    <ul>
+                        <li>{{ line.strip() }}</li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

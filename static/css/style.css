@@ -165,13 +165,12 @@ button:hover {
 }
 
 .footprint-advice {
-    background-color: #ccc;
+    background-color: #ccc;  /* Keeps the gray background */
     margin-top: 20px;
     font-size: 16px;
     color: #333;
-}
-
-.footprint-advice h2 {
-    color: #4CAF50;
-    background-color: #ccc;
+    border: 2px solid #555;  /* Adds a dark gray border */
+    border-radius: 8px;  /* Soft rounded corners */
+    padding: 15px;  /* Adds spacing inside the div */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a slight shadow for depth */
 }
