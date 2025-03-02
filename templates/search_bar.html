@@ -4,8 +4,10 @@
         <h1>EcoGenius 🌳</h1> <!-- Replace "BrandName" with your actual brand name -->
     </div>
     <form method="POST">
-        <input type="text" class="typable-bar" name="keyword" placeholder="Search a location..." required>
+        <input type="text" class="typable-bar" name="keyword" placeholder="Search a location..." required onchange="resetUploadButton()">
         <button type="submit">Submit</button>
     </form>
+    <div class="points-box">
+        💸EcoPoints: <span id="points">0</span>
+    </div>
 </div>
-

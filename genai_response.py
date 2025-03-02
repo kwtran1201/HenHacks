@@ -13,7 +13,7 @@ def generate_response(water_price, gas_price, electricity_price, num_people, loc
     - Electricity Price: ${electricity_price} per month
     - Number of people: {num_people} in a few bullet points.
 
-    Narrow the answer down with key points to 10 bullet points with a shortened sentence. Provide a suggestion on how to improve next to the addressed problem if possible. Else, PLEASE ignored it. Also
+    Narrow the answer down with key points to 10 bullet points with a shortened sentence. Provide  PRACTICAL solutions  on how to improve next to the addressed problem if possible. Else, PLEASE ignored it. Also
     can you make in format "category: explanation" (on the same line). Do not try to bold text. Do not add any space between the bullet points and explanation. Do not center-align the explanation.
     """
 

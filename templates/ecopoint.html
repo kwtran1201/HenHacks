@@ -1,0 +1,30 @@
+<!-- Image Upload Section -->
+{% if ai_generated_response %}
+<div class="image-upload-container">
+    <h3>Greener Solution:</h3>
+
+    <form action="/" method="post" enctype="multipart/form-data">
+        <div class="image-upload">
+            <label for="image1">Upload Image 1:</label>
+            <input type="file" name="image1" id="image1" accept="image/*" onchange="previewImage(event, 'preview1')">
+
+            <label for="image2">Upload Image 2:</label>
+            <input type="file" name="image2" id="image2" accept="image/*" onchange="previewImage(event, 'preview2')">
+        </div>
+
+        <button type="button" class="upload-btn" id="uploadButton" onclick="uploadImages()" disabled>Upload Both Images</button>
+    </form>
+
+    <!-- Image Previews (Side by Side) -->
+    <div class="image-preview">
+        <h3>Before:</h3>
+        <img id="preview1" src="#" alt="Image 1 Preview">
+        <h3>After:</h3>
+        <img id="preview2" src="#" alt="Image 2 Preview">
+    </div>
+</div>
+
+<!-- Link to your JavaScript file -->
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endif %}

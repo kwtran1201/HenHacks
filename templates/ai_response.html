@@ -11,7 +11,7 @@
 
 {% if ai_generated_response %}
     <div class="footprint-advice">
-        <h3>AI Response:</h3>
+        <h3>Summary:</h3>
         <ul>
             {% for line in ai_generated_response.split('*') if line.strip() %}
                 {% if '**' in line %}
